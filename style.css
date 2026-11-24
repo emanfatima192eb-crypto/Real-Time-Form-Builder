@@ -1,0 +1,323 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+.builder-container {
+    display: grid;
+    grid-template-columns: 220px minmax(300px, 1fr) 280px;
+    gap: 20px;
+    padding: 30px;
+    max-width: 1500px;
+    margin: auto;
+    align-items: start;
+}
+
+.field-builder,
+.form-preview,
+.field-configuration {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.field-builder button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #dbe2ef;
+    border-radius: 6px;
+    background: #f8faff;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.field-builder button:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.form-preview {
+    min-height: 350px;
+}
+
+.form-management {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-management input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.form-management button,
+.submit-button {
+    padding: 12px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#savedForms {
+    margin-bottom: 22px;
+}
+
+.saved-form {
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f8faff;
+    border: 1px solid #dbe2ef;
+    border-radius: 6px;
+}
+
+.saved-form p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.saved-form button {
+    padding: 8px 12px;
+    margin: 5px 5px 0 0;
+    border: none;
+    border-radius: 5px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.saved-form .edit-form {
+    background: #16a34a;
+}
+
+.saved-form .delete-form {
+    background: #dc2626;
+}
+
+#previewForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#previewForm input:not([type="radio"]):not([type="checkbox"]),
+#previewForm select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.dynamic-field {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.dynamic-field.selected {
+    border: 2px solid #2563eb;
+}
+
+.dynamic-field.dragging {
+    opacity: 0.4;
+}
+
+.dynamic-field.drag-over {
+    border: 2px dashed #2563eb;
+}
+
+.dynamic-field > label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.drag-handle {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background: #f8faff;
+    cursor: grab;
+    color: #555;
+}
+
+.dynamic-field input[type="radio"],
+.dynamic-field input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.dynamic-field div label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.dynamic-field div label input {
+    margin: 0 8px 0 0;
+}
+
+#configurationPanel label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: 600;
+}
+
+#configurationPanel input[type="text"],
+#configurationPanel textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+#configurationPanel textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#configurationPanel .required-setting {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#configurationPanel .required-setting input {
+    width: auto;
+}
+
+#configurationPanel button {
+    width: 100%;
+    padding: 11px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#savedResponses {
+    margin-top: 25px;
+}
+
+.response-card {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 12px;
+    overflow-wrap: anywhere;
+}
+
+.response-card p {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.response-card pre {
+    white-space: pre-wrap;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.response-card button {
+    margin-top: 10px;
+    padding: 7px 12px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.empty-message {
+    color: #777;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+@media (max-width: 1000px) {
+    .builder-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-preview {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 650px) {
+    .builder-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .form-preview {
+        grid-column: auto;
+    }
+
+    .form-management {
+        flex-direction: column;
+    }
+}
+
+

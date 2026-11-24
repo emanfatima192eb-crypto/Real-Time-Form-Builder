@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Form Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Real-Time Form Builder</h1>
+        <p>Create your own custom forms without coding</p>
+    </header>
+
+    <main class="builder-container">
+
+        <section class="field-builder">
+            <h2>Add Fields</h2>
+
+            <button type="button" data-type="text">Text Input</button>
+            <button type="button" data-type="email">Email Input</button>
+            <button type="button" data-type="number">Number Input</button>
+            <button type="button" data-type="select">Dropdown</button>
+            <button type="button" data-type="radio">Radio Buttons</button>
+            <button type="button" data-type="checkbox">Checkboxes</button>
+            <button type="button" data-type="date">Date Picker</button>
+        </section>
+
+        <section class="form-preview">
+
+            <h2>Form Preview</h2>
+
+            <div class="form-management">
+                <input type="text" id="formName" placeholder="Enter Form Name">
+                <button type="button" id="saveForm">Save Form</button>
+            </div>
+
+            <div id="savedForms"></div>
+
+            <form id="previewForm" novalidate>
+                <div id="formFields"></div>
+
+                <button type="submit" class="submit-button">Submit Form</button>
+            </form>
+
+            <div id="savedResponses"></div>
+
+        </section>
+
+        <section class="field-configuration">
+
+            <h2>Field Configuration</h2>
+
+            <p>Select a field to configure its settings.</p>
+
+            <div id="configurationPanel"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
